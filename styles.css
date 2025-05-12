@@ -691,7 +691,7 @@ nav a {
 }
 @media (min-width: 1200px){
     .nav-links a{
-        font-size: 1.2rem; /* Increase font size for menu */
+        font-size: 1.1rem; /* Increase font size for menu */
     }
     #hero{
         grid-column: 1 / span 2; /* Make it span both columns */
@@ -699,8 +699,9 @@ nav a {
     #hero h2{
         margin-top: 300px;
     }
+   
     #intro-text {
-        font-size: 1.5rem; /* Increase font size for larger screens */
+        font-size: 1.5em; /* Increase font size for larger screens */
         grid-column: 1; /* Place intro-text in the first column */
         grid-row:2/ span 4;
         align-self: stretch; /* Stretch vertically to fill the grid cell */
@@ -714,7 +715,7 @@ nav a {
 
     #slideshow {
         max-width:50%; /* Allow it to fit the grid column */
-        height:500px;
+        height:auto;
         grid-column: 2; /* Place slideshow in the second column */
         align-self: center; /* Center vertically */
     }
@@ -737,8 +738,13 @@ nav a {
         grid-template-rows: auto; /* Adjust rows automatically */
         gap: 20px; /* Add spacing between grid items */
         align-items: stretch; /* Stretch all items to fill their grid cells */
-        margin:0 400px; /* Change margins */
+        
     }
+    body.home-page main #intro-text{
+        margin-left:150px;
+    }
+    
+}
     #info-section .info-image {
       /* Allow the image to take up one part of the space */
         max-width: 20%; /* Limit the image width */
@@ -760,6 +766,18 @@ nav a {
         line-height: 1.8; /* Improve readability with better line spacing */
         padding-top: 20px;;
     }
+@media(min-width: 2000px){
+    .nav-links a{
+        font-size: 1.2rem; /* Increase font size for menu */
+    }
+    .large-screen-only p{
+        font-size: 1.5rem; /* Increase font size for larger screens */
+        padding: 40px 0;
+    }
+    .footer-links a{
+        font-size: 1.2rem; /* Increase font size for menu */
+    }
+    
 }
 
 /* Slick Slider Styling */
