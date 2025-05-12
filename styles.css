@@ -690,6 +690,9 @@ nav a {
     }
 }
 @media (min-width: 1200px){
+    .nav-links a{
+        font-size: 1.2rem; /* Increase font size for larger screens */
+    }
     #hero{
         grid-column: 1 / span 2; /* Make it span both columns */
     }
@@ -734,7 +737,7 @@ nav a {
         grid-template-rows: auto; /* Adjust rows automatically */
         gap: 20px; /* Add spacing between grid items */
         align-items: stretch; /* Stretch all items to fill their grid cells */
-        margin:0 400px;
+        margin:0 400px; /* Change margins */
     }
     #info-section .info-image {
       /* Allow the image to take up one part of the space */
