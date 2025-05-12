@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Learn more about Daisy Leming, her journey, and her passion for art.">
+        <meta name="keywords" content="about Daisy Leming, artist, art journey, biography">
+        <meta name="author" content="Daisy Leming Art">
+        <title>About Daisy Leming - Artist and Creator</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <img src="img/main.jpg" alt="Portrait of Daisy Leming" class="hero-image">
+            <h2>About Me</h2>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about-me">
+            <p>Hello! I'm Daisy Leming, a self-taught artist, always exploring new ideas and styles. My creative journey is fueled by curiosity, and I believe true creativity lies in constantly evolving and experimenting with fresh perspectives. Growing up, I was always drawn to art, but it wasn’t until I began traveling the world that my passion truly ignited. With no formal training, I immersed myself in mastering portraiture, blending natural elements, colors, and patterns.</p>
+            <p>My creative process starts with observing the world around me—finding inspiration in nature, people, and the environment. I begin with acrylics to build the initial layers, then bring depth and emotion with oils, allowing texture and life to emerge.
+                For me, art is about connection. I aim to create works that not only reflect my vision but also evoke emotions and inspire others to appreciate the beauty that surrounds us.</p>
+            <p>My work has been featured in several festivals in Western Australia, including the Halloween, Wonderland, and Meliora festivals in 2023-2024. I’ve also had the privilege of collaborating with <a href="https://gypsygoddesscreations.com/" target="_blank" rel="noopener noreferrer">The Gypsy Goddess Creations</a>, where I created beautiful paintings of their stunning headpieces, working alongside the artist herself.</p>
+            <p>When I’m not painting, you can find me exploring new places, hiking, or creating websites, games or 3d models.</p>
+            <p>Feel free to explore my gallery or connect with me if you’re interested in a custom commission or collaboration.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/daisy-leming-761433345/" target="blank" aria-label="LinkedIn">
+                <img src="img/linkedin-icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.instagram.com/daisylemingart" target="blank" aria-label="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com/daisylemingart" target="blank" aria-label="Facebook">
+                <img src="img/facebookicon.png" alt="Facebook Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <p>&copy; 2025 Daisy Leming Art. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const burgerMenu = document.querySelector(".burger-menu");
+            const navLinks = document.querySelector(".nav-links");
+    
+            burgerMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

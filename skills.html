@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore Daisy Leming's skills in painting, web development, design, and more.">
+        <meta name="keywords" content="skills, painting, web development, design, tools, soft skills">
+        <meta name="author" content="Daisy Leming Art">
+        <title>Skills - Daisy Leming</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="spacer"></div>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h1>My Skills</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Painting</td>
+                        <td>Mixed media, murals, illustrations</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>HTML5, CSS3, JavaScript, PHP, Python (basic), SQL, MySQL, Apache</td>
+                    </tr>
+                    <tr>
+                        <td>Frameworks and Tools</td>
+                        <td>Unity, Adobe Creative Cloud (Photoshop, Illustrator, Animate), Autodesk Maya, Blender 3D</td>
+                    </tr>
+                    <tr>
+                        <td>UI/UX Design</td>
+                        <td>Prototyping, Wireframing, Figma, Accessibility-first Design, Responsive Layouts</td>
+                    </tr>
+                    <tr>
+                        <td>Version Control</td>
+                        <td>Git (basic), GitHub</td>
+                    </tr>
+                    <tr>
+                        <td>CMS and Databases</td>
+                        <td>MySQL, basic CMS operations</td>
+                    </tr>
+                    <tr>
+                        <td>Soft Skills</td>
+                        <td>Communication, teamwork, creativity, cultural sensitivity, problem solving</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/daisy-leming-761433345/" target="_blank" aria-label="LinkedIn">
+                <img src="img/linkedin-icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.instagram.com/daisylemingart" target="_blank" aria-label="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com/daisylemingart" target="_blank" aria-label="Facebook">
+                <img src="img/facebookicon.png" alt="Facebook Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <p>&copy; 2025 Daisy Leming Art. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const burgerMenu = document.querySelector(".burger-menu");
+            const navLinks = document.querySelector(".nav-links");
+    
+            burgerMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

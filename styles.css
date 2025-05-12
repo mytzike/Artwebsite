@@ -1,0 +1,782 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Inspiration&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+/* Ensure Full-Height Layout */
+html, body {
+    width: 100%;
+    height: 100%;
+    
+}
+/* Body Styling */
+body {
+    font-family: 'Inria Sans', sans-serif;
+    line-height: 1.6;
+    color: #92C1F8;
+    background-color: #27340A;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the body spans the full width */
+    display: block; /* Change from flex to block layout */
+    align-items: center; /* Center content vertically */
+    
+}
+
+/* Logo Styling */
+.logo-text {
+    font-family: 'Inspiration', cursive;
+    font-size: 3rem;
+    font-weight: 500;
+    color:#92C1F8;/*92C1F8, DEE7DC*/
+    margin: 0; /* Ensure no extra margins */
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed; /* Ensure the header is positioned above the hero */
+    z-index: 10; /* Place the header above the hero image */
+    background-color: rgba(39, 52, 10, 0.5); /* Semi-transparent background */
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+/* Hero Section Styling */
+#hero {
+    position: relative; /* Ensure the hero section stays in the normal flow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35vh; /* Make the hero section fill the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1; /* Keep the z-index for layering */
+}
+
+#hero img {
+    position: absolute; /* Keep the image positioned absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire section */
+    z-index: -1; /* Place the image behind the hero content */
+}
+
+#hero h1 {
+    display:none;
+    color: #ECE665;
+    font-size: 2rem;
+    z-index: 2; /* Ensure the text is above the image */
+}
+#intro-text {
+    position: relative; /* Allow it to flow naturally below the hero */
+    color:wheat; /* Text color */
+    font-size: 0.9rem; /* Font size */
+    font-weight: 100; /* Remove bold font (normal weight) */
+    padding: 20px 20px; /* Add horizontal padding for better spacing */
+    text-align: center; /* Center-align the text */
+    line-height: 1.6; /* Improve readability with line spacing */
+    word-wrap: break-word; /* Ensure long words break to fit the container */
+    z-index: 2; /* Ensure it is above the hero image */
+}
+#slideshow {
+    aspect-ratio: 3/4;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the slideshow */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Gallery-Button Styling */
+
+#gallery-button {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically (optional) */
+    width: 100%; /* Ensure the section spans the full width */
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+#gallery-button button {
+    background-color: transparent;
+    box-shadow:inset 2px 6px 8px rgba(0, 0, 0, 0.2); /* Add shading (shadow) */
+    color: #5fa0ea; /* Set the text color */
+    border:#5fa0ea; /* Set the border color */
+    border-style: solid; /* Set the border style */
+    padding: 8px 8px; /* Add padding for better spacing */
+    font-size: 0.9rem; /* Set the font size */
+    font-weight: 600;
+    border-radius: 20px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    text-align: center; /* Center-align the text */
+    display: inline-block; /* Ensure it behaves like a button */
+   
+}
+
+#gallery-button button:hover {
+    background-color: #9AA32D; /* Change background color on hover */
+    color: #0B1400; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+/* Info-Section Styling */
+#info-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    background-color:#374606;
+    margin-top: 20px; /* Space between sections */
+}
+
+#info-section img {
+    width: 70%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px;
+    border-radius: 120px; /* Optional: Add rounded corners */
+    filter:sepia(0.2); /* Apply sepia filter for a vintage look */
+}
+#info-section img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+.large-screen-only {
+    display: flex;
+    flex-direction: column; /* Hide on smaller screens */
+}
+.large-screen-only p{
+    color: wheat; /* Text color */
+    font-size: 0.9rem; /* Font size */
+    font-weight: 100; /* Remove bold font (normal weight) */
+    margin: 20px 0 20px 0; /* Space between the image and text */
+    padding: 0 20px; /* Add horizontal padding for better spacing */
+    text-align: center; /* Center-align the text */
+    line-height: 1.6; /* Improve readability with line spacing */
+    word-wrap: break-word; /* Ensure long words break to fit the container */
+}
+
+.large-screen-only button {
+    background-color: transparent;
+    box-shadow:inset 2px 6px 8px rgba(0, 0, 0, 0.2); /* Add shading (shadow) */
+    color: #5fa0ea; /* Set the text color */
+    border:#5fa0ea; /* Set the border color */
+    border-style: solid; /* Set the border style */
+    padding: 8px 8px; /* Add padding for better spacing */
+    font-size: 0.9rem; /* Set the font size */
+    font-weight: 600;
+    border-radius: 20px; /* Add rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    text-align: center; /* Center-align the text */
+    display: inline-block; /* Ensure it behaves like a button */
+    align-self: center; /* Center the button horizontally */
+    width: auto; /* Prevent the button from stretching */
+    max-width: none; /* Ensure no max-width is applied */
+}
+
+.large-screen-only button:hover {
+    background-color: #9AA32D; /* Change background color on hover */
+    color: #0B1400; /* Change text color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+footer{
+    display: flex;
+    flex-direction:column;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+
+    background-color: rgba(40, 19, 7, 0.4); /* Add transparency with alpha value */
+    box-shadow:2px 6px 8px rgba(0, 0, 0, 0.2); /* Add shading (shadow) */
+}
+footer p{
+    color: #ECE665; /* Text color */
+    font-size: 0.9rem; /* Font size */
+    font-weight: 100; /* Remove bold font (normal weight) */
+    margin: 20px 0 20px 0; /* Space between the image and text */
+    padding: 0 20px; /* Add horizontal padding for better spacing */
+    text-align: center; /* Center-align the text */
+    line-height: 1.6; /* Improve readability with line spacing */
+    word-wrap: break-word; /* Ensure long words break to fit the container */
+}
+.footer-links {
+    display: flex; /* Use Flexbox for navigation links */
+    flex-direction: row; /* Arrange links in a row */
+    gap: 15px; /* Add spacing between links */
+    justify-content: flex-start; /* Align links to the left */
+    align-items: center; /* Center links vertically */
+}
+.footer-links a:hover {
+    color: #92C1F8; /* Highlight the active link with a gold color */
+    font-weight: bold; /* Make the active link bold */
+}
+.footer-links a.active {
+    display: flex;
+    color: wheat; /* Highlight the active link with a gold color */
+    font-weight: bold; /* Make the active link bold */
+}
+/* Social Media Icons */
+
+.social-media a {
+    text-decoration: none; /* Remove the underline */
+    display: inline-block; /* Ensure the icons behave like inline-block elements */
+    margin: 0 10px; /* Add spacing between the icons */
+}
+
+.social-media img {
+    width: 24px; /* Set the size of the icons */
+    height: 24px; /* Maintain aspect ratio */
+    filter: brightness(0) invert(1); /* Make icons white for dark backgrounds */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.social-media img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+/* Navigation Styling */    
+
+nav a {
+    display: flex;
+    margin: 10px 0;
+    color: #ECE665;
+    text-decoration: none;
+}
+
+/* Burger Menu Button */
+.burger-menu {
+    display: flex; /* Hidden by default for larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure it sits above other elements */
+    position: absolute;
+    top: 20px;
+    right:10px;
+    margin: 0; /* Ensure no extra margins */
+    padding: 0;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ECE665;
+    border-radius: 5px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: none; /* Hidden by default for mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    background-color: #27340A;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a {
+    color: #ECE665;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #92C1F8; /* Highlight the active link with a gold color */
+    font-weight: bold; /* Make the active link bold */
+    animation: slideIn 0.3s ease-in-out; /* Optional: Add a slide-in animation */
+}
+
+/* Show Navigation Links When Active */
+.nav-links.active {
+    display: flex;
+}
+.nav-links a.active{
+    color: wheat; /* Highlight the active link with a gold color */
+    font-weight: bold; /* Make the active link bold */
+    
+}
+
+/* ABOUT PAGE*/
+#hero h2 {
+    margin-top: 150px; /* Adjust the value to move it lower */
+    background-color: rgba(40, 19, 7, 0.6);
+    display: block; /* Ensure it is visible */
+    color: #ECE665;
+    font-size: 1.5rem;
+    padding: 5px 7px;
+    border-radius: 100px;;
+    z-index: 2; /* Ensure it stays above the background image */
+}
+#about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 5px; /* Space between sections */
+}
+#about-me p{
+    color: wheat; /* Text color */
+    font-size: 1rem; /* Font size */
+    font-weight: 100; /* Remove bold font (normal weight) */
+    margin: 20px 0 15px 0; /* Space between the image and text */
+    padding: 0 20px; /* Add horizontal padding for better spacing */
+    text-align: center; /* Center-align the text */
+    line-height: 1.6; /* Improve readability with line spacing */
+    word-wrap: break-word; /* Ensure long words break to fit the container */
+}
+#about-me a{
+    color:#5fa0ea;
+}
+/*GALLERY PAGE*/
+#paintings{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 20px; /* Space between sections */
+    background-color: #27340A; /* Optional: Add a background color */
+}
+
+#paintings h1{
+    color: #ECE665;
+    font-size: 1.5rem;
+    z-index: 2;
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center-align the title */
+} /* Ensure the text is above the image */
+
+
+#paintings p {
+    color: wheat; /* Description text color */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 30px; /* Space below the description */
+    line-height: 1.6; /* Improve readability */
+}
+#exhibitions{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 20px; /* Space between sections */
+    background-color: #27340A; /* Optional: Add a background color */
+}
+#exhibitions h1{
+    color: #ECE665;
+    font-size: 1.5rem;
+    z-index: 2;
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center-align the title */
+} /* Ensure the text is above the image */
+#exhibitions p {
+    color: wheat; /* Description text color */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 30px; /* Space below the description */
+    line-height: 1.6; /* Improve readability */
+}
+#murals{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 20px; /* Space between sections */
+    background-color: #27340A; /* Optional: Add a background color */
+}
+#murals h1{
+    color: #ECE665;
+    font-size: 1.5rem;
+    z-index: 2;
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center-align the title */
+} /* Ensure the text is above the image */
+#murals p {
+    color: wheat; /* Description text color */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 30px; /* Space below the description */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: Limit the grid width */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Individual Figures */
+.gallery-grid figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+    justify-content: center;
+    background-color: #374606; /* Background color for each figure */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within the figure */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    aspect-ratio: 1 / 2; /* Enforce a square aspect ratio */
+}
+
+/* Anchor Tags Inside Figures */
+.gallery-grid figure a {
+    display: block; /* Ensure the anchor behaves like a block element */
+    width: 100%; /* Full width of the figure */
+    height: 100%; /* Full height of the figure */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Images */
+.gallery-grid img {
+    display:block;
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill the container */
+    border-bottom: 1px solid #ECE665; /* Add a border below the image */
+}
+
+/* Figcaptions */
+.gallery-grid figcaption {
+    color: #ECE665; /* Caption text color */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center-align the text */
+    padding: 10px; /* Add padding for spacing */
+    background-color: rgba(39, 52, 10, 0.8); /* Semi-transparent background */
+    width: 100%; /* Full width of the figure */
+}
+
+/*SKILLS PAGE*/
+.spacer{
+    height:60px; /* Space between sections */
+}
+#skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 20px; /* Space between sections */
+}
+#skills h1{
+    color: #ECE665;
+    font-size: 1.5rem;
+    z-index: 2; /* Ensure the text is above the image */
+}
+/* Table Styling */
+#skills table {
+    width: 100%; /* Make the table span the full width */
+    border-collapse: collapse; /* Merge borders for a cleaner look */
+    margin: 20px 0; /* Add spacing above and below the table */
+}
+
+#skills th, #skills td {
+    border: 1px solid #ECE665; /* Add borders around table cells */
+    padding: 10px; /* Add padding inside cells */
+    text-align: center; /* Center-align text */
+}
+
+#skills th {
+    background-color: #374606; /* Background color for table headers */
+    color: lightblue; /* Font color for table headers */
+    font-size: 1rem; /* Increase font size for headers */
+    font-weight: bold; /* Make the text bold */
+}
+
+#skills td {
+    color: wheat; /* Font color for table data */
+    font-size: 1rem; /* Font size for table data */
+}
+
+/* Contact Form Section */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form */
+    justify-content: center;
+    padding: 20px; /* Add padding for spacing */
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 5px; /* Space between sections */
+    background-color: #27340A; /* Match the background color */
+}
+
+
+#contact-form h1 {
+    color: #ECE665; /* Title color */
+    font-size: 1.8rem; /* Title font size */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center-align the title */
+}
+
+#contact-form p {
+    color: wheat; /* Description text color */
+    font-size: 1rem; /* Font size */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 30px; /* Space below the description */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Form Styling */
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Limit the form width */
+    background-color: #374606; /* Form background color */
+    padding: 20px; /* Add padding inside the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Input and Textarea Styling */
+#contact-form input, #contact-form textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Add padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ECE665; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #27340A; /* Match the background color */
+    color: wheat; /* Text color */
+    font-size: 1rem; /* Font size */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+#contact-form input::placeholder, #contact-form textarea::placeholder {
+    color: #92C1F8; /* Placeholder text color */
+    font-style: italic; /* Optional: Italicize placeholder text */
+}
+
+/* Submit Button Styling */
+#contact-form button {
+    background-color: #5fa0ea; /* Button background color */
+    color: #0B1400; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+#contact-form button:hover {
+    background-color: #9AA32D; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Textarea Specific Styling */
+#contact-form textarea {
+    resize: none; /* Disable resizing */
+    height: 100px; /* Set a fixed height */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-form form {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    #contact-form input, #contact-form textarea {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    #contact-form button {
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none; /* Hide burger menu on larger screens */
+    }
+
+    .nav-links {
+        display: flex; /* Show navigation links by default */
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+    }
+
+    .nav-links a {
+        margin: 0 15px;
+    }
+    #info-section {
+        gap: 20px; /* Add space between the image and text */
+        flex-direction: row;
+    }
+
+    #info-section .info-image {
+         /* Allow the image to take up one part of the space */
+        max-width: 40%; /* Limit the image width */
+        height:auto;
+    }
+    .large-screen-only {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #info-section p {
+        align-self:center; /* Align text to the left */
+        margin-top:40px;
+    
+    }
+
+    #info-section button {
+        margin-top: 20px; /* Add space between the text and button */
+        align-self: center; /* Align the button to the left */
+    }
+    /* Slick Slider Styling */
+    #slideshow {
+        max-width: 60%; /* Reduce the slider width for smaller screens */
+        margin: 0 auto; /* Center the slider */
+        padding: 25px; /* Add padding for spacing */
+    }
+
+    .slick-slider img {
+        border-radius: 5px; /* Reduce border radius for smaller screens */
+    }
+
+}
+@media (min-width: 1000px){
+    #info-section .info-image {
+        flex: 1; /* Allow the image to take up one part of the space */
+        max-width: 40%; /* Limit the image width */
+        padding-top: 20px;
+        height:auto;
+    }
+    #info-section p {
+        flex: 2; /* Allow the text to take up more space */
+        margin-top:40px;
+    
+    }
+}
+@media (min-width: 1200px){
+    #hero{
+        grid-column: 1 / span 2; /* Make it span both columns */
+    }
+    #hero h2{
+        margin-top: 300px;
+    }
+    #intro-text {
+        font-size: 1.5rem; /* Increase font size for larger screens */
+        grid-column: 1; /* Place intro-text in the first column */
+        grid-row:2/ span 4;
+        align-self: stretch; /* Stretch vertically to fill the grid cell */
+        justify-self: stretch; /* Stretch horizontally to fill the grid cell */
+        padding: 20px; /* Add padding for spacing inside the text */
+        background-color: rgba(40, 19, 7, 0.2); /* Add transparency with alpha value */
+        display: flex; /* Use flexbox for centering content */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+    }
+
+    #slideshow {
+        max-width:50%; /* Allow it to fit the grid column */
+        height:500px;
+        grid-column: 2; /* Place slideshow in the second column */
+        align-self: center; /* Center vertically */
+    }
+
+    #gallery-button {
+        grid-column:2; 
+        justify-self: center; /* Center the button horizontally */
+        margin-top: 20px; /* Add spacing above the button */
+    }
+    #info-section{
+        grid-column: 1 / span 2; /* Make it span both columns */
+        justify-self: center; /* Center the button horizontally */
+        margin-top: 20px; /* Add spacing above the button */
+    }
+
+    /* Create a grid container for intro-text and slideshow */
+    body.home-page main {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr; /* Two columns: intro-text and slideshow */
+        grid-template-rows: auto; /* Adjust rows automatically */
+        gap: 20px; /* Add spacing between grid items */
+        align-items: stretch; /* Stretch all items to fill their grid cells */
+    }
+    #info-section .info-image {
+      /* Allow the image to take up one part of the space */
+        max-width: 20%; /* Limit the image width */
+        padding-top: 10px;
+        height:auto;
+    }
+    .large-screen-only p{
+        font-size: 1.2rem; /* Increase font size for larger screens */
+        padding: 40px 0;
+    }
+    #about-me{
+        padding: 20px;
+    }
+    #about-me p {
+        font-size: 1.15rem; /* Keep the font size appropriate for larger screens */
+        max-width: 1000px; /* Limit the maximum width of the text */
+        margin: 0 auto; /* Center the text horizontally */
+        text-align: center; /* Center-align the text */
+        line-height: 1.8; /* Improve readability with better line spacing */
+        padding-top: 20px;;
+    }
+}
+
+/* Slick Slider Styling */
+.slick-slider {
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+    margin: 0 auto; /* Center the slider */
+}
+
+.slick-slider img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill the container */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.slick-dots {
+    bottom: 20px; /* Position dots at the bottom */
+}
+
+.slick-dots li button:before {
+    color: #ECE665 !important; /* Customize dot color */
+    opacity: 1; /* Ensure dots are fully opaque */
+}

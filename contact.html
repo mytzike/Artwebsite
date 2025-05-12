@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get in touch with Daisy Leming for commissions, collaborations, or inquiries.">
+        <meta name="keywords" content="contact Daisy Leming, art inquiries, commissions, collaborations">
+        <meta name="author" content="Daisy Leming Art">
+        <title>Contact Daisy Leming</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    </head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-contact">
+            <h1>Contact Me</h1>
+            <img src="img/main.jpg" alt="Main Portrait Image" class="hero-image">
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/daisy-leming-761433345/" target="_blank" aria-label="LinkedIn">
+                <img src="img/linkedin-icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.instagram.com/daisylemingart" target="_blank" aria-label="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com/daisylemingart" target="_blank" aria-label="Facebook">
+                <img src="img/facebookicon.png" alt="Facebook Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <p>&copy; 2025 Daisy Leming Art. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const burgerMenu = document.querySelector(".burger-menu");
+            const navLinks = document.querySelector(".nav-links");
+    
+            burgerMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+    <!-- Inline JavaScript for Form Validation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("contactForm");
+            const nameInput = document.getElementById("name");
+            const subjectInput = document.getElementById("subject");
+            const messageInput = document.getElementById("message");
+
+            form.addEventListener("submit", (event) => {
+                let isValid = true;
+                let errorMessage = "";
+
+                // Validate Name (only characters, max 20)
+                const nameRegex = /^[a-zA-Z\s]{1,20}$/;
+                if (!nameRegex.test(nameInput.value)) {
+                    isValid = false;
+                    errorMessage += "Name must only contain letters and spaces (max 20 characters).\n";
+                }
+
+                // Validate Subject (max 100 characters, can include numbers)
+                if (subjectInput.value.length > 100) {
+                    isValid = false;
+                    errorMessage += "Subject must be 100 characters or less.\n";
+                }
+
+                // Validate Message (must not be empty)
+                if (messageInput.value.trim() === "") {
+                    isValid = false;
+                    errorMessage += "Message cannot be empty.\n";
+                }
+
+                // If validation fails, prevent form submission and show alert
+                if (!isValid) {
+                    event.preventDefault();
+                    alert(errorMessage);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

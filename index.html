@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to My Website. Learn more about my art and projects, skills, and how to contact me.">
+        <meta name="keywords" content="website, gallery, about me, contact, skills, projects">
+        <meta name="author" content="Daisy Leming Art">
+        <title>Daisy Leming Art - Paintings and Creative Works</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Slick CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    </head>
+<body class="home-page">
+    <!-- Navigation Bar -->
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <button class="burger-menu" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1>“Art enables us to find ourselves and lose ourselves at the same time.” – Thomas Merton</h1>
+            <img src="img/main.jpg" alt="Main Portrait Image" class="hero-image">
+        </section>
+
+        <!-- Text Section -->
+        <section id="intro-text">
+            <p>Driven by a deep curiosity and a passion for creation. Specializing in portraiture, I blend natural elements, vibrant colors, and intricate patterns to bring my visions to life.</p>
+        </section>
+
+        
+
+        <!-- Slideshow Section -->
+        <section id="slideshow">
+            <div class="slick-slider">
+                <!-- Add your slideshow images here -->
+                <img src="img/Blossoming.jpg" alt="Woman with wings Painting" class="slide" loading="lazy">
+                <img src="img/Softmasculinity.jpg" alt="Colourful Man Painting" class="slide" loading="lazy">
+                <img src="img/MargaritaPeace.jpg" alt="Woman's painting with a headpiece" class="slide" loading="lazy">
+                <img src="img/MargaritaLove.jpg" alt="Woman's painting with a red headpiece" class="slide" loading="lazy">
+                <img src="img/WarriorGoddess.jpg" alt="Woman's painting with a  big headpiece" class="slide" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Gallery Button -->
+        <section id="gallery-button">
+            <button onclick="location.href='gallery.html'">Explore My Work</button>
+        </section>
+
+        <!-- Image, Paragraph, and Button Section -->
+        <section id="info-section">
+            <img src="img/main2.png" alt="Self Portrait" class="info-image">
+            <div class="large-screen-only">
+            <p>"My process begins with observing the world around me, where inspiration strikes. I use acrylics for foundational layers before finishing with oils to create depth and emotion. I love to push my skills further and explore the inner world of myself, allowing each piece to become both a reflection of my surroundings and a journey inward."</p>
+            <button onclick="location.href='about.html'">Learn More</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        
+        <nav class="footer-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/daisy-leming-761433345/" target="blank" aria-label="LinkedIn">
+                <img src="img/linkedin-icon.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://www.instagram.com/daisylemingart" target="blank" aria-label="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.facebook.com/daisylemingart" target="blank" aria-label="Facebook">
+                <img src="img/facebookicon.png" alt="Facebook Icon">
+            </a>
+        </div>
+        <div class="logo">
+            <span class="logo-text">Daisy Leming</span>
+        </div>
+        <p>&copy; 2025 Daisy Leming Art. All rights reserved.</p>
+    </footer>
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const burgerMenu = document.querySelector(".burger-menu");
+            const navLinks = document.querySelector(".nav-links");
+    
+            burgerMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Initialize Slick slider for all screen sizes
+            $('.slick-slider').slick({
+                dots: false, // Show navigation dots
+                arrows: true, // Show navigation arrows
+                infinite: true, // Enable infinite looping
+                speed: 500, // Transition speed
+                fade: false, // Disable fade effect for sliding
+                cssEase: 'linear', // Smooth transition
+                autoplay: true, // Enable autoplay
+                autoplaySpeed: 3000, // 3 seconds per slide
+                responsive: [
+                    {
+                        breakpoint: 768, // For screens smaller than 768px
+                        settings: {
+                            arrows: false, // Hide arrows for smaller screens
+                            dots: false // Keep dots visible
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
