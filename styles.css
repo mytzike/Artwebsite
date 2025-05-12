@@ -734,6 +734,7 @@ nav a {
         grid-template-rows: auto; /* Adjust rows automatically */
         gap: 20px; /* Add spacing between grid items */
         align-items: stretch; /* Stretch all items to fill their grid cells */
+        margin:0 400px;
     }
     #info-section .info-image {
       /* Allow the image to take up one part of the space */
