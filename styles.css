@@ -747,7 +747,7 @@ nav a {
 }
     #info-section .info-image {
       /* Allow the image to take up one part of the space */
-        max-width: 20%; /* Limit the image width */
+        max-width: 70%; /* Limit the image width */
         padding-top: 10px;
         height:auto;
     }
