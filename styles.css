@@ -58,7 +58,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 35vh; /* Make the hero section fill the viewport height */
+    height: 60vh; /* Make the hero section fill the viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
